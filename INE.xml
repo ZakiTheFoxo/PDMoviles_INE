@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="inestyle.css"?>
+<!-- File Name: INE.xml -->
+<credencial_elector>
+	<INE>
+		<number>INE No. 1</number>
+		<NOMBRE>NOMBRE</NOMBRE>
+		<nombre>Diaz Alarcon
+			Aguilar
+			Omar Arturo</nombre>
+		<DIRECCION>DOMICILIO</DIRECCION>
+		<direccion>C Independencia 6348
+			COL Patrimonio 72450
+			Puebla, Pue</direccion>
+		<clave>CLAVE DE ELECTOR: DZAGOM02091221H100</clave>
+		<curp>CURP: DIAO020912HPLZGMA8</curp>
+		<fecha>FECHA DE NACIMIENTO: 12/09/2002</fecha>
+		<sexo>SEXO: H</sexo>
+		<seccion>SECCION: 1185</seccion>
+		<ano>ANO DE REGISTRO: 2020 00</ano>
+		<vigencia>VIGENCIA: 2020 - 2030</vigencia>
+	</INE>
+	<INE>
+		<number>INE No. 2</number>
+		<NOMBRE>NOMBRE</NOMBRE>
+		<nombre>Diaz Alarcon
+			Aguilar
+			Omar Arturo</nombre>
+		<DIRECCION>DOMICILIO</DIRECCION>
+		<direccion>C Independencia 6348
+			COL Patrimonio 72450
+			Puebla, Pue</direccion>
+		<clave>CLAVE DE ELECTOR: DZAGOM02091221H100</clave>
+		<curp>CURP: DIAO020912HPLZGMA8</curp>
+		<fecha>FECHA DE NACIMIENTO: 12/09/2002</fecha>
+		<sexo>SEXO: H</sexo>
+		<seccion>SECCION: 1185</seccion>
+		<ano>ANO DE REGISTRO: 2020 00</ano>
+		<vigencia>VIGENCIA: 2020 - 2030</vigencia>
+	</INE>
+	<INE>
+		<number>INE No. 3</number>
+		<NOMBRE>NOMBRE</NOMBRE>
+		<nombre>Diaz Alarcon
+			Aguilar
+			Omar Arturo</nombre>
+		<DIRECCION>DOMICILIO</DIRECCION>
+		<direccion>C Independencia 6348
+			COL Patrimonio 72450
+			Puebla, Pue</direccion>
+		<clave>CLAVE DE ELECTOR: DZAGOM02091221H100</clave>
+		<curp>CURP: DIAO020912HPLZGMA8</curp>
+		<fecha>FECHA DE NACIMIENTO: 12/09/2002</fecha>
+		<sexo>SEXO: H</sexo>
+		<seccion>SECCION: 1185</seccion>
+		<ano>ANO DE REGISTRO: 2020 00</ano>
+		<vigencia>VIGENCIA: 2020 - 2030</vigencia>
+	</INE>
+</credencial_elector>
