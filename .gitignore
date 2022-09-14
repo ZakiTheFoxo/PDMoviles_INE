@@ -1,0 +1,13 @@
+# Don't track content of these folders
+#someOtherfoler/
+
+
+# Compiled source #
+###################
+#*.txt or name.txt
+*.xml
+*.css
+*.txt
+
+# Packages #
+############
