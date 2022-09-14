@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="inestyle.css"?>
+<!-- File Name: INE.xml -->
+<credencial_elector>
+	<INE>
+		<number>INE No. 1</number>
+		<NOMBRE>NOMBRE</NOMBRE>
+		<nombre>a
+			a
+			a</nombre>
+		<DIRECCION>DOMICILIO</DIRECCION>
+		<direccion>C a a
+			COL a a
+			aa, a</direccion>
+		<clave>CLAVE DE ELECTOR: a</clave>
+		<curp>CURP: a</curp>
+		<fecha>FECHA DE NACIMIENTO: a</fecha>
+		<sexo>SEXO: a</sexo>
+		<seccion>SECCION: a</seccion>
+		<ano>ANO DE REGISTRO: a</ano>
+		<vigencia>VIGENCIA: a</vigencia>
+	</INE>
+	<INE>
+		<number>INE No. 2</number>
+		<NOMBRE>NOMBRE</NOMBRE>
+		<nombre>ads
+			ads
+			asd</nombre>
+		<DIRECCION>DOMICILIO</DIRECCION>
+		<direccion>C asd asd
+			COL as asd
+			asd, asd</direccion>
+		<clave>CLAVE DE ELECTOR: asd</clave>
+		<curp>CURP: asd</curp>
+		<fecha>FECHA DE NACIMIENTO: asd</fecha>
+		<sexo>SEXO: asd</sexo>
+		<seccion>SECCION: sda</seccion>
+		<ano>ANO DE REGISTRO: asd</ano>
+		<vigencia>VIGENCIA: asda</vigencia>
+	</INE>
+	<INE>
+		<number>INE No. 3</number>
+		<NOMBRE>NOMBRE</NOMBRE>
+		<nombre>asd
+			ff
+			uiy</nombre>
+		<DIRECCION>DOMICILIO</DIRECCION>
+		<direccion>C gi cu
+			COL kvyjt cv
+			jhv, iulvc</direccion>
+		<clave>CLAVE DE ELECTOR: ilc</clave>
+		<curp>CURP: yyu</curp>
+		<fecha>FECHA DE NACIMIENTO: vcj</fecha>
+		<sexo>SEXO: ytukfyvh</sexo>
+		<seccion>SECCION: yjtu</seccion>
+		<ano>ANO DE REGISTRO: yiu</ano>
+		<vigencia>VIGENCIA: gv</vigencia>
+	</INE>
+</credencial_elector>
