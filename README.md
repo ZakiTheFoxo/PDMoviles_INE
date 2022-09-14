@@ -1,18 +1,28 @@
-## Getting Started
+## Program Basis
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+This program takes the information of a Mexican voting credential or "INE", which later is used to create a XML file to be displayed in a Chrome tab or another web page.
 
-## Folder Structure
+It consists of
 
-The workspace contains two folders by default, where:
+• Credencial class
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+• LLenado class
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+• LennadoUI class
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+### Credencial class
+Credencial class stores all the variables and methods just for the credential.
 
-## Dependency Management
+### Llenado class
+Llenado is the backend code for the UI, it has relation with the Credencial class and contains the methods to access it, also it counts with a vector<Credencial> so the user can store as many credentials as they want.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+### LlenadoUI class
+LlenadoUI class is the frontend code, it generates the UI where the information is written and pulled.
+
+## Languages
+
+The code is written in Java, this java program later creates a XML and a CSS file.
+
+## IDE
+
+Im using VS Code with the java and git extensions.
