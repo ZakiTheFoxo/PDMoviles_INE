@@ -5,11 +5,10 @@
  * Utiliza File para crear los archivos XML y CSS, y write(); para escribir todo el Vector de credenciales en el 
  * archivo XML con su respectivo formato.
  * 
- * Importante recalcar que todos los System.in del Scanner son de tipo String, para evitar validaciones 
- * ya que es un programa sencillo.
+ * Esta es la parte lógica de la UI
  *
  * @author Omar Arturo Díaz Alarcón Aguilar
- * @version 1.3
+ * @version 2.0
  */
 
 import java.util.*;
@@ -17,77 +16,66 @@ import java.io.*;
 
 public class Llenado {
 
-    private static Credencial ine;
-    private static Vector<Credencial> credenciales;
-    private static File fileIne, fileCss;
+    private Credencial ine;
+    private Vector<Credencial> credenciales;
+    private File fileIne, fileCss;
 
+    //Prepara el programa (solo crea el vector que almacenara los datos)
     public Llenado(){
-
+        credenciales = new Vector<Credencial>(1);
+    }
+    
+    //Verifica que el vector tenga al menos un dato
+    public boolean isVectorCredencialesEmpty(){
+        if(credenciales.size() == 0){
+            return true;
+        }else{
+            return false;
+        }
     }
 
-    // Método que llena los datos para el objeto INE, el cual se crea en el main
-    private static void llenarDatos(Scanner sc){
-        // Ingresar el Nombre completo 
-        String nom, ap_p, ap_m;
-            
-        System.out.println("Datos de la INE");
-        System.out.println("Nombre");
-
-        System.out.println("Ingrese el Apellido Paterno: ");
-        ap_p = sc.nextLine();
-        System.out.println("Ingrese el Apellido Materno: ");
-        ap_m = sc.nextLine();
-        System.out.println("Ingrese el Nombre: ");    
-        nom = sc.nextLine();
-
-        ine.setNombre(nom, ap_p, ap_m);
-
-        // Ingresar datos de dirección
-        String calle, colonia, estado, municipio, c_postal, no_casa;
-
-        System.out.println();
-        System.out.println("Dirección");
-
-        System.out.println("Ingrese la Calle: ");    
-        calle = sc.nextLine();
-        System.out.println("Ingrese el Numero de Casa: ");    
-        no_casa = sc.nextLine();
-        System.out.println("Ingrese la Colonia: ");    
-        colonia = sc.nextLine();
-        System.out.println("Ingrese el Codigo Postal: ");    
-        c_postal= sc.nextLine();
-        System.out.println("Ingrese el Municipio: ");    
-        municipio = sc.nextLine();
-        System.out.println("Ingrese el Estado: ");    
-        estado = sc.nextLine();
-
-        ine.setDirección(calle, colonia, estado, municipio, c_postal, no_casa);
-
-        // Ingresar infomación
-        String clave_elector, curp, fecha_nac, seccion, año_registro, vigencia, sexo;
-        
-        System.out.println();
-        System.out.println("Información");
-
-        System.out.println("Ingrese la Clave de Elector: ");
-        clave_elector = sc.nextLine();
-        System.out.println("Ingrese el CURP: ");
-        curp = sc.nextLine();
-        System.out.println("Ingrese la Fecha de Nacimiento: ");
-        fecha_nac = sc.nextLine();
-        System.out.println("Ingrese el Sexo: ");
-        sexo = sc.nextLine();
-        System.out.println("Ingrese la seccion: ");
-        seccion = sc.nextLine();
-        System.out.println("Ingrese el Año de Registro: ");
-        año_registro = sc.nextLine();
-        System.out.println("Ingrese la Vigencia: ");
-        vigencia = sc.nextLine();
-
-        ine.setInformación(clave_elector, curp, fecha_nac, seccion, año_registro, vigencia, sexo);
+    public void crearCredencial(){
+        // Crear y llenar el objeto INE
+        ine = new Credencial();
     }
 
-    private static void generaCSS(){
+    public void agregarCredencial(){
+        // Agregar la INE al Vector
+        credenciales.add(ine);   
+    }
+    
+    // Método que recibe los datos de nombre y los llena en el objeto
+    public void setNombre(String ap_p, String ap_m, String nom){
+        ine.setApellidoPaterno(ap_p);
+        ine.setApellidoMaterno(ap_m);
+        ine.setNombre(nom);
+    }
+
+    // Método que recibe los datos de direccion y los llena en el objeto
+    public void setDireccion(   String calle, String colonia, String estado, 
+                                    String municipio, String c_postal, String no_casa){
+        ine.setCalle(calle);
+        ine.setColonia(colonia);
+        ine.setEstado(estado);
+        ine.setMunicipio(municipio);
+        ine.setCodigoPostal(c_postal);
+        ine.setNumeroCasa(no_casa);
+    }
+
+    // Método que recibe los datos de informacion y los llena en el objeto
+    public void setInformacion( String clave_elector, String curp, String fecha_nac, 
+                                    String seccion, String año_registro, String vigencia, String sexo){
+        ine.setClaveElector(clave_elector);
+        ine.setCURP(curp);
+        ine.setFechaNacimiento(fecha_nac);
+        ine.setSeccion(seccion);
+        ine.setAñoRegistro(año_registro);
+        ine.setVigencia(vigencia);
+        ine.setSexo(sexo);
+    }
+
+    // Método que genera el archivo CSS y llama al método que lo llena
+    public void generaCSS(){
         fileCss = new File("inestyle.css");
         if(!fileCss.exists()){
             System.out.println("El archivo no se pudo crear.");
@@ -101,7 +89,7 @@ public class Llenado {
     }
 
     // Método que escribe el archivo css para el xml
-    private static void escribeCSS() throws IOException{
+    private void escribeCSS() throws IOException{
         fileCss = new File("inestyle.css");
         if(!fileCss.exists()){
             System.out.println("El archivo no se pudo crear.");
@@ -120,7 +108,8 @@ public class Llenado {
         escribe.close();
     }
 
-    private static void generaXML(){
+    // Método que genera el archivo XML y llama al método que lo llena
+    public void generaXML(){
         fileIne = new File("INE.xml");
         if(!fileIne.exists()){
             System.out.println("El archivo no se pudo crear.");
@@ -134,7 +123,7 @@ public class Llenado {
     }
 
     // Método write que escribe los datos de todas las Credenciales del vector, en el archivo xml
-    private static void escribeXML() throws IOException{
+    private void escribeXML() throws IOException{
         FileWriter escribe = new FileWriter("INE.xml");
 
         // Iniciar el documento
@@ -173,33 +162,5 @@ public class Llenado {
         // Terminar el documento
         escribe.write("</credencial_elector>\n");  // 0
         escribe.close();
-    }
-
-    public static void main(String args[]){
-        // Iniciar el vector que contendra todas las INE
-        credenciales = new Vector<Credencial>(1);
-        Scanner sc = new Scanner(System.in);
-        Scanner scmenu = new Scanner(System.in); 
-
-        int menu = 1;
-
-        do{ // Repetir llenado hasta que el usuario se detenga y cree el XML
-            // Crear y llenar el objeto INE
-            ine = new Credencial();
-            llenarDatos(sc);
-
-            // Agregar la INE al Vector
-            credenciales.add(ine);           
-
-            System.out.println("Si desea agregar otra INE escriba 1, en caso contrario escriba 2: ");
-            menu = scmenu.nextInt();
-            System.out.println("\n");
-        }while(menu == 1); 
-
-        // Generar el archivo XML y CSS, y escribir en ellos los datos recolectados en el Vector
-        generaXML();
-        generaCSS();
-        
-        scmenu.close();
     }
 }
